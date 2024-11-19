@@ -122,11 +122,8 @@ This project is licensed under the [MIT License](LICENSE).
 Special thanks to:
 - [YOLOv5](https://github.com/ultralytics/yolov5) for the object detection framework.
 - Dataset contributors and environmental organizations for making this project possible.
-```
 
 # MoveIt Tutorial: Pick and Place with ROS 2 Humble
-
-This README provides a step-by-step guide to setting up and executing a pick-and-place robotic task using MoveIt on ROS 2 Humble.
 
 ---
 
@@ -143,7 +140,6 @@ Before starting, ensure the following are installed and configured:
    cd ~/moveit_ws
    colcon build
    source install/setup.bash
-   ```
 
 ---
 
