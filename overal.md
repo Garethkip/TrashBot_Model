@@ -1,4 +1,3 @@
-```markdown
 # TrashBot: Marine Trash Picker Robot  
 
 **TrashBot** is an innovative robotic system designed to detect, collect, and categorize trash in water bodies such as oceans, rivers, and lakes. The robot uses computer vision for detecting various types of pollutants and ensures minimal interference with the surrounding marine environment.  
@@ -150,7 +149,3 @@ This project is licensed under the [MIT License](LICENSE).
 - Open-source community for resources and support.  
 ```
 
-### Instructions:
-- Replace `yourusername` with your actual GitHub username.  
-- Add a `LICENSE` file if applicable.  
-- Include any additional collaborators or organizations in the acknowledgments.
