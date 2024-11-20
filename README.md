@@ -843,7 +843,7 @@ Special thanks to:
     - Here, your arm will appear with an open hand and an object in front of it.
 
 11. **Adding more stages to enable the arm to pick and place the object**:
-    [pick_and_place_constructor](https://github.com/khanji254/Trash_Bot_Project/blob/main/pick_and_place_with_moveit_task_constructor.rst)
+    [pick_and_place_constructor](https://github.com/khanji254/Trash_Bot_Project/blob/main/pick_and_place_with_moveit_task_constructor.rst?plain=1)
 
 12. **Visualizing with RViz**:
     ```bash
