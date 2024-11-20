@@ -238,7 +238,7 @@ Special thanks to:
     --dependencies moveit_ros_planning_interface rclcpp \
     --node-name hello_moveit hello_moveit
    ```
-2. **Create a ROS Node and Executor**:
+2. **Create a ROS Node and Executor** in /ws_moveit2/src/hello_moveit/src/hello_moveit.cpp
    ```cpp
    #include <memory>
 
@@ -356,7 +356,7 @@ Special thanks to:
      colcon build --mixin debug
      ```
 
-2. **Create a ROS executor and spin the node on a thread**:
+2. **Create a ROS executor and spin the node on a thread** in /ws_moveit2/src/hello_moveit/src/hello_moveit.cpp:
    - Make the following changes:
      ```cpp
      #include <thread>  // <---- add this to the set of includes at the top
@@ -379,7 +379,7 @@ Special thanks to:
      spinner.join();  // <--- Join the thread before exiting
      return 0;
      ```
-3. **Create and Initialize MoveItVisualTools**:
+3. **Create and Initialize MoveItVisualTools** in /ws_moveit2/src/hello_moveit/src/hello_moveit.cpp:
    ```cpp
    // Create the MoveIt MoveGroup Interface
    using moveit::planning_interface::MoveGroupInterface;
@@ -393,7 +393,7 @@ Special thanks to:
    moveit_visual_tools.loadRemoteControl();
    ```
 
-4. **Write closures for visualizations**:
+4. **Write closures for visualizations** in /ws_moveit2/src/hello_moveit/src/hello_moveit.cpp:
    ```cpp
    // Create closures for visualization
    auto const draw_title = [&moveit_visual_tools](auto text) {
@@ -416,7 +416,7 @@ Special thanks to:
        };
    ```
 
-5. **Visualize the steps of your program**:
+5. **Visualize the steps of your program** in /ws_moveit2/src/hello_moveit/src/hello_moveit.cpp:
    ```cpp
    // Set a target Pose
    auto const target_pose = [] {
@@ -486,7 +486,7 @@ Special thanks to:
    #include <moveit/planning_scene_interface/planning_scene_interface.h>
    ```
 
-2. **Change the Target Pose**:
+2. **Change the Target Pose** in /ws_moveit2/src/hello_moveit/src/hello_moveit.cpp:
    ```cpp
    // Set a target Pose
    auto const target_pose = [] {
@@ -500,7 +500,7 @@ Special thanks to:
    move_group_interface.setPoseTarget(target_pose);
    ```
 
-3. **Create a Collision Object**:
+3. **Create a Collision Object** in /ws_moveit2/src/hello_moveit/src/hello_moveit.cpp:
    ```cpp
    // Create collision object for the robot to avoid
    auto const collision_object = [frame_id =
@@ -562,7 +562,7 @@ Special thanks to:
    ros2 pkg create --build-type ament_cmake --node-name mtc_tutorial mtc_tutorial
    ```
 
-3. **Add the dependencies to package.xml**:
+3. **Add the dependencies to package.xml** in /ws_moveit2/src/mtc_tutorial/package.xml:
    ```xml
    <?xml version="1.0"?>
    <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
@@ -587,7 +587,7 @@ Special thanks to:
    </package>
    ```
 
-4. **Add dependencies to CMakeLists.txt**:
+4. **Add dependencies to CMakeLists.txt** in /ws_moveit2/src/mtc_tutorial/CMakeLists.txt:
    ```cmake
         cmake_minimum_required(VERSION 3.8)
         project(mtc_tutorial)
@@ -628,7 +628,7 @@ Special thanks to:
         ament_package()
    ```
 
-5. **Setting up the project with MoveIt Task Constructor** in the mtc_tutorial.cpp:
+5. **Setting up the project with MoveIt Task Constructor** in /ws_moveit2/src/mtc_tutorial/src/mtc_tutorial.cpp:
    ```cpp
         #include <rclcpp/rclcpp.hpp>
         #include <moveit/planning_scene/planning_scene.h>
@@ -796,7 +796,7 @@ Special thanks to:
    ```
 
 6. **Running the demo**:
-   - **Launch file**: Save it as `pick_place_demo.launch.py`.
+   - **Launch file**: Save it as `pick_place_demo.launch.py` in /ws_moveit2/src/moveit2_tutorials/doc/tutorials/pick_and_place_with_moveit_task_constructor/launch/pick_place_demo.launch.py.
      ```python
      from launch import LaunchDescription
      from launch_ros.actions import Node
@@ -817,7 +817,7 @@ Special thanks to:
 
          return LaunchDescription([pick_place_demo])
      ```
-   - **Add this line to your CMakeLists.txt**:
+   - **Add this line to your CMakeLists.txt** in /ws_moveit2/src/moveit2_tutorials/doc/tutorials/pick_and_place_with_moveit_task_constructor/CMakeLists.txt:
      ```cmake
      install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
      ```
@@ -843,9 +843,7 @@ Special thanks to:
     - Here, your arm will appear with an open hand and an object in front of it.
 
 11. **Adding more stages to enable the arm to pick and place the object**:
-    ```cpp
-    To be added soon.
-    ```
+    [pick_and_place_constructor]()
 
 12. **Visualizing with RViz**:
     ```bash
