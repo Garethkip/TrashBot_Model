@@ -194,7 +194,7 @@ Special thanks to:
     # You may want to add this to ~/.bashrc to source it automatically
     export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
     ```
-##MoveIt Quickstart in RViz
+## MoveIt Quickstart in RViz
 
 ### Steps:
 
